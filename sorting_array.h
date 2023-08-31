@@ -44,7 +44,7 @@ void input(char names[7][30])
         strlwr(names[i]);
 
 
-        if (i == 7)
+        if (i == 6)
         {
             break;
         }
