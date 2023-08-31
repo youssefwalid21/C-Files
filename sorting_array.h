@@ -10,6 +10,9 @@
 #include <string.h>
 #include <conio.h>
 
+char temp[1][30];
+int cmp;
+
 // Prototype
 void logo();
 
@@ -58,9 +61,6 @@ void Sort_Ascending(char names[7][30]);
 // Body
 void Sort_Ascending(char names[7][30])
 {
-    char temp[1][30];
-    int cmp;
-
     for (int j = 0; j <= 6; j++)
     {
 
@@ -94,8 +94,6 @@ void Sort_Descending(char names[7][30]);
 // Body
 void Sort_Descending(char names[7][30])
 {
-    char temp[1][30];
-    int cmp;
     for (int j = 0; j <= 6; j++)
     {
 
