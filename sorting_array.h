@@ -6,17 +6,20 @@
     └--------------------------------┘
 */
 
+// Import vital libraries
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
 
+// Temporary variables; required for sorting later
 char temp[1][30];
 int cmp;
 
-// Prototype
+// Prototype of "logo" function
 void logo();
 
-// Body
+// Body of "logo" function.
+// This function prints the ASCII art program logo
 void logo()
 {
     printf("   _____            _     _   _                             _____                                       \n");
@@ -31,10 +34,11 @@ void logo()
 }
 
 
-// Prototype
+// Prototype of "input" function
 void input(char names[7][30]);
 
-// Body
+// Body of "input" function
+// This function inputs 7 strings (names) from user
 void input(char names[7][30])
 {
     printf("Enter Seven Names: ");
@@ -42,8 +46,10 @@ void input(char names[7][30])
 
     for (int i = 0; i < 7; i++)
     {
+        // Scan name at current index
         gets(names[i]);
         fflush(stdin);
+        // Convert string to lowercase
         strlwr(names[i]);
 
 
@@ -55,10 +61,12 @@ void input(char names[7][30])
     }
 }
 
-// Prototype
+// Prototype of "Sort_Ascending" function
 void Sort_Ascending(char names[7][30]);
 
-// Body
+// Body of "Sort_Ascending" function
+/* This function sorts an array of strings alphabetically (A - Z)
+   and prints the result */
 void Sort_Ascending(char names[7][30])
 {
     for (int j = 0; j <= 6; j++)
@@ -88,10 +96,12 @@ void Sort_Ascending(char names[7][30])
     }
 }
 
-// Prototype
+// Prototype of "Sort_Descending" function
 void Sort_Descending(char names[7][30]);
 
-// Body
+// Body of "Sort_Descending" function
+/* This function sorts an array of strings alphabetically (Z - A)
+   and prints the result */
 void Sort_Descending(char names[7][30])
 {
     for (int j = 0; j <= 6; j++)
