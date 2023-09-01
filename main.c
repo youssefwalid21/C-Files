@@ -6,43 +6,49 @@
     └--------------------------------┘
 **/
 
+// Import vital libraries
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
+
+// Import custom header file containing user-made functions
 #include "functions.h"
 
+// Main function, houses the code for the program
 int main()
 {
+    // Define user inputs
     char names[7][30], choice_do;
     int choice;
 
+    // Main program loop
     do
     {
-        logo(); //Include for the logo
+        logo(); // Function from header file, prints program logo
         printf("============================================================\n");
         printf("==== Pick Sorting Order (1: Ascending - 2: Descending): ====\n");
         printf("============================================================\n");
         printf(">> ");
-        scanf("%d", &choice); // Scaning the choice for the switch case
+        scanf("%d", &choice); // Input user choice for switch case
         fflush(stdin);
 
         switch (choice)
         {
         case 1:
-            input(names); // The Input Function to scan the seven arrays
-            Sort_Ascending(names); // This function to sort the seven names from A ot Z
+            input(names); // This function requests the user to input seven names
+            Sort_Ascending(names); // This function sorts the names alphabetically from A to Z
             break;
 
         case 2:
-            input(names); // The Input Function to scan the seven arrays
-            Sort_Descending(names); // This function to sort the seven names from Z ot A
+            input(names);
+            Sort_Descending(names); // This function sorts the names alphabetically from Z to A
             break;
 
-        default: // In case the user didn't enter 1 or 2 
+        default: // In case the choice input was invalid
             printf("Invlaid Choice!!\n");
-            
             break;
         }
+            // Prompt user to start over after execution
             printf("============================================================\n");
             printf("============== Do You Want Try Again ( -> Y - -> N): =======\n");
             printf("============================================================\n");
@@ -52,5 +58,6 @@ int main()
         
     } while (choice_do == 'y' || choice_do == 'Y');
 
+    // On program ran successfully, return no error codes
     return 0;
 }
